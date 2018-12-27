@@ -1,0 +1,15 @@
+= docToolchain installer
+
+The goal of this repository is to provide an easy to use installer for docToolchain to make it usable without prior knowledge.
+
+== Requirements
+
+Wouldn't it be nice if docToolchain had a one line install command like sdkman.io?
+Something like `curl -s "https://get.docToolchain.io" | bash`?
+
+- the mechanism should work on Linux, MacOS and Windows 10 (with WSL enabled)
+- goal is to install docToolchain as git submodule
+- it should analyze the current directory: is it a git repository? Gradle? Maven? and act accordingly
+- it should as for some settings and propose reasonable defaults
+- it should modify all files by itself - it can't damage the project, because it is under version control :-)
+- so it should also check that there are no currently modified files
